@@ -1,2 +1,2 @@
 # portfolio
-Hyeon Joon Song's Portfolio/Journey Web Development
+Hyeon Joon Song's Portfolio/Journey for Web Development
