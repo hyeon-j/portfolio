@@ -1,20 +1,20 @@
 :root {
-    --text-color-white: #faf4ff;
-    --text-color-blue: #10375c;
-    --text-color-yellow: #f3c623;
-    --text-color-cyan: #127681;
+    --color-white: #faf4ff;
+    --color-blue: #10375c;
+    --color-darkblue: #283149;
+    --color-lightblue: #dbedf3;
+    --color-red: #f73859;
 
-    --background-color-white: #faf4ff;
-    --background-color-blue: #10375c;
-    --background-color-yellow: #f3c623;
-    --background-color-cyan: #127681;
-
-    --text-font-header: 'Krona One';
+    --text-font-header: 'Inter';
 }
  
 body {
     margin: 0;
-    background-color: var(--background-color-white);
+    font-family: var(--text-font-header);
+}
+
+ul {
+    list-style: none;
 }
 
 a {
@@ -31,26 +31,24 @@ a {
 
     padding: 15px 45px;
 
-    font-size: 1.25rem;
+    font-size: 1.25rem;    
 
-    font-family: var(--text-font-header);
-
-    background-color: var(--background-color-blue);
+    background-color: var(--color-lightblue);
     color: var(--text-color-dark);
 }
 
-.navbar-logo a {
-    color: var(--text-color-white);
+.navbar-logo i {
+    color: var(--color-darkblue);
 }
 
-.navbar-logo i {
-    color: var(--text-color-white);
+.navbar-logo a {
+    color: var(--color-red);
+    font-weight: 600;
 }
 
 .navbar-menu {
     display: flex;
     justify-content: space-between;
-    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -60,22 +58,21 @@ a {
 }
 
 .navbar-menu li a {
-    color: var(--text-color-white);
+    color: var(--color-darkblue);
 
     padding: 5px;
 }
 
 .navbar-menu li a:hover {
-    background-color: var(--background-color-white);
-    color: var(--text-color-blue);
-
-    border-radius: 3px;
+    text-decoration: underline;
 }
 
 .navbar-button {
     display: none;
 
-    color: var(--text-color-white);
+    padding: 0 4px;
+
+    color: var(--color-red);
     font-size: 1.5rem;
 
     position: absolute;
@@ -83,18 +80,170 @@ a {
     top: 15px;
 }
 
+.navbar-button:hover {
+    background-color: var(--color-red);
+    color: var(--color-white);
 
+    border-radius: 3px;
+}
 
+/* Header */
 
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    padding: 3% 15%;
 
+    background-color: var(--color-lightblue);
+}
 
+#header h1 {
+    color: var(--color-darkblue);
+    font-size: 3rem;
+    font-weight: 700;
 
+    width: 350px;
 
+    text-align: center;
+}
 
+#header h2 {
+    color: var(--color-blue);
 
+    width: 350px;
 
-@media screen and (max-width: 950px) {
+    text-align: center;
+}
+
+/* About Me */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 3% 15%;
+}
+
+.about p {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.img-myself {
+    width: 25%;
+    border-radius: 100%;
+}
+
+.header-specialty {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin: 15px 0;
+    padding: 0px;
+}
+
+.header-specialty-item {
+    text-align: center;
+    margin: 0 30px;
+
+    color: var(--color-darkblue);
+    background-color: var(--color-lightblue);
+
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.header-specialty-item i {
+    font-size: 3rem;
+}
+
+/* Skills */
+
+#skills {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--color-darkblue);
+    color: var(--color-white);
+
+    padding: 3% 15%;
+}
+
+#skills ul {
+    margin: 0;
+    padding: 0;
+}
+
+#skills ul li {
+    margin: 20px 0;
+}
+
+.bar {
+    background: var(--color-white);
+    display: block;
+    height: 4px;
+    border-radius: 3px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.bar span {
+    height: 4px;
+    float: left;
+    background-color: var(--color-red);
+    border-radius: 3px;
+}
+
+.java {
+    width: 90%;
+    animation: name 2s;
+}
+
+.html {
+    width: 85%;
+    animation: name 2s;
+}
+
+.css {
+    width: 85%;
+    animation: name 2s;
+}
+
+.go {
+    width: 80%;
+    animation: name 2s;
+}
+
+.python {
+    width: 70%;
+    animation: name 2s;
+}
+
+.javascript {
+    width: 70%;
+    animation: name 2s;
+}
+
+.english {
+    width: 100%;
+    animation: name 2s;
+}
+
+.korean {
+    width: 100%;
+    animation: name 2s;
+}
+
+@keyframes name{
+    0% {
+        width: 0%;
+    }
+}
+
+@media screen and (max-width: 800px) {
 
     /* Navigation Bar */
 
@@ -116,7 +265,7 @@ a {
     }
 
     .navbar-menu li {
-        margin: 3px 0px;
+        margin: 5px 0px;
     }
 
     .navbar-button {
@@ -125,5 +274,15 @@ a {
 
     .active {
         display: block;
+    }
+
+    /* About */
+
+    .header-specialty {
+        flex-direction: column;
+    }
+
+    .header-specialty-item {
+        margin: 10px 0;
     }
 }
