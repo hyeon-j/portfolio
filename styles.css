@@ -1,0 +1,129 @@
+:root {
+    --text-color-white: #faf4ff;
+    --text-color-blue: #10375c;
+    --text-color-yellow: #f3c623;
+    --text-color-cyan: #127681;
+
+    --background-color-white: #faf4ff;
+    --background-color-blue: #10375c;
+    --background-color-yellow: #f3c623;
+    --background-color-cyan: #127681;
+
+    --text-font-header: 'Krona One';
+}
+ 
+body {
+    margin: 0;
+    background-color: var(--background-color-white);
+}
+
+a {
+    text-decoration: none;
+    margin: 0;
+}
+
+/* Navigation Bar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 45px;
+
+    font-size: 1.25rem;
+
+    font-family: var(--text-font-header);
+
+    background-color: var(--background-color-blue);
+    color: var(--text-color-dark);
+}
+
+.navbar-logo a {
+    color: var(--text-color-white);
+}
+
+.navbar-logo i {
+    color: var(--text-color-white);
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin: 0 10px;
+}
+
+.navbar-menu li a {
+    color: var(--text-color-white);
+
+    padding: 5px;
+}
+
+.navbar-menu li a:hover {
+    background-color: var(--background-color-white);
+    color: var(--text-color-blue);
+
+    border-radius: 3px;
+}
+
+.navbar-button {
+    display: none;
+
+    color: var(--text-color-white);
+    font-size: 1.5rem;
+
+    position: absolute;
+    right: 45px;
+    top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 950px) {
+
+    /* Navigation Bar */
+
+    .navbar {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-logo {
+        width: 100%;
+        text-align: left;
+    }
+
+    .navbar-menu {
+        display: none;
+
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-menu li {
+        margin: 3px 0px;
+    }
+
+    .navbar-button {
+        display: block;
+    }
+
+    .active {
+        display: block;
+    }
+}
